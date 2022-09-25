@@ -1,0 +1,19 @@
+import java.util.*;
+public class yetAnotherTwoIntegersProblem{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        for(int i = 0; i < t; i++){
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int diff = Math.abs(a-b);
+            System.out.println((diff + 9)/10);
+        }
+    }
+}
+
+We can add or subtract 10 until the difference between a and b becomes less than 10. 
+And if it is not 0 after all such moves, we need one additional move.
+
+Let d=|a−b| is the absolute difference between a and b. The final answer is ⌊d10⌋ plus one if dmod10>0. 
+This formula can be represented as d divided by 10 rounded up, in other words ⌊d+910⌋.
